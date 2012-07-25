@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92A33D5315C02F8600F46B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5215C02F8600F46B97 /* UIKit.framework */; };
+		92A33D5515C02F8600F46B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5415C02F8600F46B97 /* Foundation.framework */; };
+		92A33D5715C02F8600F46B97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5615C02F8600F46B97 /* CoreGraphics.framework */; };
+		92A33D5915C02F8600F46B97 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5815C02F8600F46B97 /* CoreData.framework */; };
+		92A33D5F15C02F8600F46B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92A33D5D15C02F8600F46B97 /* InfoPlist.strings */; };
+		92A33D6115C02F8600F46B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D6015C02F8600F46B97 /* main.m */; };
+		92A33D6515C02F8600F46B97 /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D6415C02F8600F46B97 /* MTAppDelegate.m */; };
+		92A33D6815C02F8600F46B97 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A33D6615C02F8600F46B97 /* MainStoryboard_iPhone.storyboard */; };
+		92A33D6B15C02F8600F46B97 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A33D6915C02F8600F46B97 /* MainStoryboard_iPad.storyboard */; };
+		92A33D6E15C02F8600F46B97 /* Asanago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D6C15C02F8600F46B97 /* Asanago.xcdatamodeld */; };
+		92A33D7115C02F8600F46B97 /* MTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D7015C02F8600F46B97 /* MTMasterViewController.m */; };
+		92A33D7415C02F8600F46B97 /* MTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D7315C02F8600F46B97 /* MTDetailViewController.m */; };
+		92A33D7C15C02F8700F46B97 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D7B15C02F8700F46B97 /* SenTestingKit.framework */; };
+		92A33D7D15C02F8700F46B97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5215C02F8600F46B97 /* UIKit.framework */; };
+		92A33D7E15C02F8700F46B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5415C02F8600F46B97 /* Foundation.framework */; };
+		92A33D7F15C02F8700F46B97 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5815C02F8600F46B97 /* CoreData.framework */; };
+		92A33D8715C02F8700F46B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92A33D8515C02F8700F46B97 /* InfoPlist.strings */; };
+		92A33D8A15C02F8700F46B97 /* AsanagoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D8915C02F8700F46B97 /* AsanagoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92A33D8015C02F8700F46B97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92A33D4515C02F8600F46B97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92A33D4D15C02F8600F46B97;
+			remoteInfo = Asanago;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92A33D4E15C02F8600F46B97 /* Asanago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asanago.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A33D5215C02F8600F46B97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		92A33D5415C02F8600F46B97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		92A33D5615C02F8600F46B97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		92A33D5815C02F8600F46B97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92A33D5C15C02F8600F46B97 /* Asanago-Info.plist */ = {isa = PBXFileReference; path = "Asanago-Info.plist"; sourceTree = "<group>"; };
+		92A33D5E15C02F8600F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92A33D6015C02F8600F46B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92A33D6215C02F8600F46B97 /* Asanago-Prefix.pch */ = {isa = PBXFileReference; path = "Asanago-Prefix.pch"; sourceTree = "<group>"; };
+		92A33D6315C02F8600F46B97 /* MTAppDelegate.h */ = {isa = PBXFileReference; path = MTAppDelegate.h; sourceTree = "<group>"; };
+		92A33D6415C02F8600F46B97 /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
+		92A33D6715C02F8600F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		92A33D6A15C02F8600F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		92A33D6D15C02F8600F46B97 /* Asanago.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Asanago.xcdatamodel; sourceTree = "<group>"; };
+		92A33D6F15C02F8600F46B97 /* MTMasterViewController.h */ = {isa = PBXFileReference; path = MTMasterViewController.h; sourceTree = "<group>"; };
+		92A33D7015C02F8600F46B97 /* MTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMasterViewController.m; sourceTree = "<group>"; };
+		92A33D7215C02F8600F46B97 /* MTDetailViewController.h */ = {isa = PBXFileReference; path = MTDetailViewController.h; sourceTree = "<group>"; };
+		92A33D7315C02F8600F46B97 /* MTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
+		92A33D7A15C02F8700F46B97 /* AsanagoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsanagoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A33D7B15C02F8700F46B97 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		92A33D8415C02F8700F46B97 /* AsanagoTests-Info.plist */ = {isa = PBXFileReference; path = "AsanagoTests-Info.plist"; sourceTree = "<group>"; };
+		92A33D8615C02F8700F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92A33D8815C02F8700F46B97 /* AsanagoTests.h */ = {isa = PBXFileReference; path = AsanagoTests.h; sourceTree = "<group>"; };
+		92A33D8915C02F8700F46B97 /* AsanagoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsanagoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92A33D4B15C02F8600F46B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A33D5315C02F8600F46B97 /* UIKit.framework in Frameworks */,
+				92A33D5515C02F8600F46B97 /* Foundation.framework in Frameworks */,
+				92A33D5715C02F8600F46B97 /* CoreGraphics.framework in Frameworks */,
+				92A33D5915C02F8600F46B97 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A33D7615C02F8700F46B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A33D7C15C02F8700F46B97 /* SenTestingKit.framework in Frameworks */,
+				92A33D7D15C02F8700F46B97 /* UIKit.framework in Frameworks */,
+				92A33D7E15C02F8700F46B97 /* Foundation.framework in Frameworks */,
+				92A33D7F15C02F8700F46B97 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92A33D4315C02F8600F46B97 = {
+			isa = PBXGroup;
+			children = (
+				92A33D5A15C02F8600F46B97 /* Asanago */,
+				92A33D8215C02F8700F46B97 /* AsanagoTests */,
+				92A33D5115C02F8600F46B97 /* Frameworks */,
+				92A33D4F15C02F8600F46B97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92A33D4F15C02F8600F46B97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D4E15C02F8600F46B97 /* Asanago.app */,
+				92A33D7A15C02F8700F46B97 /* AsanagoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92A33D5115C02F8600F46B97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D5215C02F8600F46B97 /* UIKit.framework */,
+				92A33D5415C02F8600F46B97 /* Foundation.framework */,
+				92A33D5615C02F8600F46B97 /* CoreGraphics.framework */,
+				92A33D5815C02F8600F46B97 /* CoreData.framework */,
+				92A33D7B15C02F8700F46B97 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92A33D5A15C02F8600F46B97 /* Asanago */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D6315C02F8600F46B97 /* MTAppDelegate.h */,
+				92A33D6415C02F8600F46B97 /* MTAppDelegate.m */,
+				92A33D6615C02F8600F46B97 /* MainStoryboard_iPhone.storyboard */,
+				92A33D6915C02F8600F46B97 /* MainStoryboard_iPad.storyboard */,
+				92A33D6F15C02F8600F46B97 /* MTMasterViewController.h */,
+				92A33D7015C02F8600F46B97 /* MTMasterViewController.m */,
+				92A33D7215C02F8600F46B97 /* MTDetailViewController.h */,
+				92A33D7315C02F8600F46B97 /* MTDetailViewController.m */,
+				92A33D6C15C02F8600F46B97 /* Asanago.xcdatamodeld */,
+				92A33D5B15C02F8600F46B97 /* Supporting Files */,
+			);
+			path = Asanago;
+			sourceTree = "<group>";
+		};
+		92A33D5B15C02F8600F46B97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D5C15C02F8600F46B97 /* Asanago-Info.plist */,
+				92A33D5D15C02F8600F46B97 /* InfoPlist.strings */,
+				92A33D6015C02F8600F46B97 /* main.m */,
+				92A33D6215C02F8600F46B97 /* Asanago-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92A33D8215C02F8700F46B97 /* AsanagoTests */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D8815C02F8700F46B97 /* AsanagoTests.h */,
+				92A33D8915C02F8700F46B97 /* AsanagoTests.m */,
+				92A33D8315C02F8700F46B97 /* Supporting Files */,
+			);
+			path = AsanagoTests;
+			sourceTree = "<group>";
+		};
+		92A33D8315C02F8700F46B97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D8415C02F8700F46B97 /* AsanagoTests-Info.plist */,
+				92A33D8515C02F8700F46B97 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92A33D4D15C02F8600F46B97 /* Asanago */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A33D8D15C02F8700F46B97 /* Build configuration list for PBXNativeTarget "Asanago" */;
+			buildPhases = (
+				92A33D4A15C02F8600F46B97 /* Sources */,
+				92A33D4B15C02F8600F46B97 /* Frameworks */,
+				92A33D4C15C02F8600F46B97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Asanago;
+			productName = Asanago;
+			productReference = 92A33D4E15C02F8600F46B97 /* Asanago.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92A33D7915C02F8700F46B97 /* AsanagoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A33D9015C02F8700F46B97 /* Build configuration list for PBXNativeTarget "AsanagoTests" */;
+			buildPhases = (
+				92A33D7515C02F8700F46B97 /* Sources */,
+				92A33D7615C02F8700F46B97 /* Frameworks */,
+				92A33D7715C02F8700F46B97 /* Resources */,
+				92A33D7815C02F8700F46B97 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92A33D8115C02F8700F46B97 /* PBXTargetDependency */,
+			);
+			name = AsanagoTests;
+			productName = AsanagoTests;
+			productReference = 92A33D7A15C02F8700F46B97 /* AsanagoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92A33D4515C02F8600F46B97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MT;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = mootoh.net;
+			};
+			buildConfigurationList = 92A33D4815C02F8600F46B97 /* Build configuration list for PBXProject "Asanago" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 92A33D4315C02F8600F46B97;
+			productRefGroup = 92A33D4F15C02F8600F46B97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92A33D4D15C02F8600F46B97 /* Asanago */,
+				92A33D7915C02F8700F46B97 /* AsanagoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92A33D4C15C02F8600F46B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A33D5F15C02F8600F46B97 /* InfoPlist.strings in Resources */,
+				92A33D6815C02F8600F46B97 /* MainStoryboard_iPhone.storyboard in Resources */,
+				92A33D6B15C02F8600F46B97 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A33D7715C02F8700F46B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A33D8715C02F8700F46B97 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92A33D7815C02F8700F46B97 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92A33D4A15C02F8600F46B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A33D6115C02F8600F46B97 /* main.m in Sources */,
+				92A33D6515C02F8600F46B97 /* MTAppDelegate.m in Sources */,
+				92A33D6E15C02F8600F46B97 /* Asanago.xcdatamodeld in Sources */,
+				92A33D7115C02F8600F46B97 /* MTMasterViewController.m in Sources */,
+				92A33D7415C02F8600F46B97 /* MTDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A33D7515C02F8700F46B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A33D8A15C02F8700F46B97 /* AsanagoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92A33D8115C02F8700F46B97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92A33D4D15C02F8600F46B97 /* Asanago */;
+			targetProxy = 92A33D8015C02F8700F46B97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92A33D5D15C02F8600F46B97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A33D5E15C02F8600F46B97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		92A33D6615C02F8600F46B97 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A33D6715C02F8600F46B97 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		92A33D6915C02F8600F46B97 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A33D6A15C02F8600F46B97 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		92A33D8515C02F8700F46B97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92A33D8615C02F8700F46B97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92A33D8B15C02F8700F46B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92A33D8C15C02F8700F46B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92A33D8E15C02F8700F46B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Asanago/Asanago-Prefix.pch";
+				INFOPLIST_FILE = "Asanago/Asanago-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		92A33D8F15C02F8700F46B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Asanago/Asanago-Prefix.pch";
+				INFOPLIST_FILE = "Asanago/Asanago-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		92A33D9115C02F8700F46B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Asanago.app/Asanago";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Asanago/Asanago-Prefix.pch";
+				INFOPLIST_FILE = "AsanagoTests/AsanagoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		92A33D9215C02F8700F46B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Asanago.app/Asanago";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Asanago/Asanago-Prefix.pch";
+				INFOPLIST_FILE = "AsanagoTests/AsanagoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92A33D4815C02F8600F46B97 /* Build configuration list for PBXProject "Asanago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A33D8B15C02F8700F46B97 /* Debug */,
+				92A33D8C15C02F8700F46B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A33D8D15C02F8700F46B97 /* Build configuration list for PBXNativeTarget "Asanago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A33D8E15C02F8700F46B97 /* Debug */,
+				92A33D8F15C02F8700F46B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92A33D9015C02F8700F46B97 /* Build configuration list for PBXNativeTarget "AsanagoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A33D9115C02F8700F46B97 /* Debug */,
+				92A33D9215C02F8700F46B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92A33D6C15C02F8600F46B97 /* Asanago.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92A33D6D15C02F8600F46B97 /* Asanago.xcdatamodel */,
+			);
+			currentVersion = 92A33D6D15C02F8600F46B97 /* Asanago.xcdatamodel */;
+			path = Asanago.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 92A33D4515C02F8600F46B97 /* Project object */;
+}
