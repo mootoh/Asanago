@@ -25,6 +25,11 @@
 		92A33D7F15C02F8700F46B97 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A33D5815C02F8600F46B97 /* CoreData.framework */; };
 		92A33D8715C02F8700F46B97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92A33D8515C02F8700F46B97 /* InfoPlist.strings */; };
 		92A33D8A15C02F8700F46B97 /* AsanagoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D8915C02F8700F46B97 /* AsanagoTests.m */; };
+		92A33DB815C031A600F46B97 /* MTAsana.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D9915C031A600F46B97 /* MTAsana.m */; };
+		92A33DC515C031A600F46B97 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A33D9D15C031A600F46B97 /* NSData+Base64.m */; };
+		92CBA0C315C18C7000F98238 /* Workspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBA0C215C18C7000F98238 /* Workspace.m */; };
+		92CBA0CD15C1909C00F98238 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBA0CC15C1909C00F98238 /* User.m */; };
+		92CBA0D015C1949800F98238 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBA0CF15C1949800F98238 /* Project.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,25 +48,37 @@
 		92A33D5415C02F8600F46B97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92A33D5615C02F8600F46B97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		92A33D5815C02F8600F46B97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		92A33D5C15C02F8600F46B97 /* Asanago-Info.plist */ = {isa = PBXFileReference; path = "Asanago-Info.plist"; sourceTree = "<group>"; };
+		92A33D5C15C02F8600F46B97 /* Asanago-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Asanago-Info.plist"; sourceTree = "<group>"; };
 		92A33D5E15C02F8600F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92A33D6015C02F8600F46B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		92A33D6215C02F8600F46B97 /* Asanago-Prefix.pch */ = {isa = PBXFileReference; path = "Asanago-Prefix.pch"; sourceTree = "<group>"; };
-		92A33D6315C02F8600F46B97 /* MTAppDelegate.h */ = {isa = PBXFileReference; path = MTAppDelegate.h; sourceTree = "<group>"; };
+		92A33D6215C02F8600F46B97 /* Asanago-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Asanago-Prefix.pch"; sourceTree = "<group>"; };
+		92A33D6315C02F8600F46B97 /* MTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAppDelegate.h; sourceTree = "<group>"; };
 		92A33D6415C02F8600F46B97 /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
 		92A33D6715C02F8600F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		92A33D6A15C02F8600F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		92A33D6D15C02F8600F46B97 /* Asanago.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Asanago.xcdatamodel; sourceTree = "<group>"; };
-		92A33D6F15C02F8600F46B97 /* MTMasterViewController.h */ = {isa = PBXFileReference; path = MTMasterViewController.h; sourceTree = "<group>"; };
+		92A33D6F15C02F8600F46B97 /* MTMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMasterViewController.h; sourceTree = "<group>"; };
 		92A33D7015C02F8600F46B97 /* MTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMasterViewController.m; sourceTree = "<group>"; };
-		92A33D7215C02F8600F46B97 /* MTDetailViewController.h */ = {isa = PBXFileReference; path = MTDetailViewController.h; sourceTree = "<group>"; };
+		92A33D7215C02F8600F46B97 /* MTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDetailViewController.h; sourceTree = "<group>"; };
 		92A33D7315C02F8600F46B97 /* MTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDetailViewController.m; sourceTree = "<group>"; };
 		92A33D7A15C02F8700F46B97 /* AsanagoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsanagoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A33D7B15C02F8700F46B97 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		92A33D8415C02F8700F46B97 /* AsanagoTests-Info.plist */ = {isa = PBXFileReference; path = "AsanagoTests-Info.plist"; sourceTree = "<group>"; };
+		92A33D8415C02F8700F46B97 /* AsanagoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AsanagoTests-Info.plist"; sourceTree = "<group>"; };
 		92A33D8615C02F8700F46B97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		92A33D8815C02F8700F46B97 /* AsanagoTests.h */ = {isa = PBXFileReference; path = AsanagoTests.h; sourceTree = "<group>"; };
+		92A33D8815C02F8700F46B97 /* AsanagoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsanagoTests.h; sourceTree = "<group>"; };
 		92A33D8915C02F8700F46B97 /* AsanagoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsanagoTests.m; sourceTree = "<group>"; };
+		92A33D9815C031A600F46B97 /* MTAsana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAsana.h; sourceTree = "<group>"; };
+		92A33D9915C031A600F46B97 /* MTAsana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAsana.m; sourceTree = "<group>"; };
+		92A33D9C15C031A600F46B97 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		92A33D9D15C031A600F46B97 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		92A33D9E15C031A600F46B97 /* anasa-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "anasa-Prefix.pch"; sourceTree = "<group>"; };
+		92CBA0C115C18C7000F98238 /* Workspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workspace.h; sourceTree = "<group>"; };
+		92CBA0C215C18C7000F98238 /* Workspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workspace.m; sourceTree = "<group>"; };
+		92CBA0C415C18EAC00F98238 /* NSObject+subscripts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+subscripts.h"; sourceTree = "<group>"; };
+		92CBA0CB15C1909C00F98238 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		92CBA0CC15C1909C00F98238 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		92CBA0CE15C1949800F98238 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		92CBA0CF15C1949800F98238 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +149,7 @@
 				92A33D7015C02F8600F46B97 /* MTMasterViewController.m */,
 				92A33D7215C02F8600F46B97 /* MTDetailViewController.h */,
 				92A33D7315C02F8600F46B97 /* MTDetailViewController.m */,
-				92A33D6C15C02F8600F46B97 /* Asanago.xcdatamodeld */,
+				92CBA0C015C18AEB00F98238 /* Model */,
 				92A33D5B15C02F8600F46B97 /* Supporting Files */,
 			);
 			path = Asanago;
@@ -141,10 +158,12 @@
 		92A33D5B15C02F8600F46B97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				92A33D9715C031A600F46B97 /* anasa */,
 				92A33D5C15C02F8600F46B97 /* Asanago-Info.plist */,
 				92A33D5D15C02F8600F46B97 /* InfoPlist.strings */,
 				92A33D6015C02F8600F46B97 /* main.m */,
 				92A33D6215C02F8600F46B97 /* Asanago-Prefix.pch */,
+				92CBA0C415C18EAC00F98238 /* NSObject+subscripts.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,6 +185,41 @@
 				92A33D8515C02F8700F46B97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92A33D9715C031A600F46B97 /* anasa */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D9815C031A600F46B97 /* MTAsana.h */,
+				92A33D9915C031A600F46B97 /* MTAsana.m */,
+				92A33D9A15C031A600F46B97 /* Supporting Files */,
+			);
+			name = anasa;
+			path = ../../anasa/anasa;
+			sourceTree = "<group>";
+		};
+		92A33D9A15C031A600F46B97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92A33D9C15C031A600F46B97 /* NSData+Base64.h */,
+				92A33D9D15C031A600F46B97 /* NSData+Base64.m */,
+				92A33D9E15C031A600F46B97 /* anasa-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92CBA0C015C18AEB00F98238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92CBA0CB15C1909C00F98238 /* User.h */,
+				92CBA0CC15C1909C00F98238 /* User.m */,
+				92A33D6C15C02F8600F46B97 /* Asanago.xcdatamodeld */,
+				92CBA0CE15C1949800F98238 /* Project.h */,
+				92CBA0CF15C1949800F98238 /* Project.m */,
+				92CBA0C115C18C7000F98238 /* Workspace.h */,
+				92CBA0C215C18C7000F98238 /* Workspace.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +336,11 @@
 				92A33D6E15C02F8600F46B97 /* Asanago.xcdatamodeld in Sources */,
 				92A33D7115C02F8600F46B97 /* MTMasterViewController.m in Sources */,
 				92A33D7415C02F8600F46B97 /* MTDetailViewController.m in Sources */,
+				92A33DB815C031A600F46B97 /* MTAsana.m in Sources */,
+				92A33DC515C031A600F46B97 /* NSData+Base64.m in Sources */,
+				92CBA0C315C18C7000F98238 /* Workspace.m in Sources */,
+				92CBA0CD15C1909C00F98238 /* User.m in Sources */,
+				92CBA0D015C1949800F98238 /* Project.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +450,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Asanago/Asanago-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Asanago/Asanago-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,7 +466,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Asanago/Asanago-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "Asanago/Asanago-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +530,7 @@
 				92A33D8F15C02F8700F46B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92A33D9015C02F8700F46B97 /* Build configuration list for PBXNativeTarget "AsanagoTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +539,7 @@
 				92A33D9215C02F8700F46B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

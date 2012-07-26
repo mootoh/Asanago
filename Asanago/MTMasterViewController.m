@@ -9,6 +9,12 @@
 #import "MTMasterViewController.h"
 
 #import "MTDetailViewController.h"
+#import "MTAsana.h"
+#import "User.h"
+#import "Workspace.h"
+#import "Project.h"
+#import "NSObject+subscripts.h"
+
 
 @interface MTMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -35,7 +41,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(sync)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (MTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
@@ -63,7 +69,7 @@
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:[NSDate date] forKey:@"id"];
     
     // Save the context.
     NSError *error = nil;
@@ -150,14 +156,14 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -242,7 +248,56 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"name"] description];
+}
+#pragma mark Sync
+
+- (void) sync
+{
+    MTAsana *asana = [[MTAsana alloc] init];
+    [asana login:kASANA_API_TOKEN callback:^void(NSError *error, NSObject *value) {
+        NSDictionary *userInfo = (NSDictionary *)value;
+        NSLog(@"user = %@", userInfo);
+
+        User *user = (User *)[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+        user.id = [userInfo[@"id"] stringValue];
+        user.name = userInfo[@"name"];
+
+        NSError *dbError = nil;
+        if (![self.managedObjectContext save:&dbError]) {
+            NSLog(@"error in saving user info into db: %@", [dbError localizedDescription]);
+            return;
+        }
+
+        NSArray *workspaces = userInfo[@"workspaces"];
+        for (NSDictionary *workspaceInfo in workspaces) {
+            NSLog(@"workspace = %@", workspaceInfo);
+            
+            [asana projects:kASANA_API_TOKEN workspace:workspaceInfo[@"id"] callback:^(NSError *error2, NSObject *values2) {
+                NSArray *projects = (NSArray *)values2;
+                for (NSDictionary *projectInfo in projects) {
+                    Project *project = (Project *)[NSEntityDescription insertNewObjectForEntityForName:@"Project" inManagedObjectContext:self.managedObjectContext];
+                    project.id = [projectInfo[@"id"] stringValue];
+                    project.name = projectInfo[@"name"];
+                }
+
+                NSError *dbError2 = nil;
+                if (![self.managedObjectContext save:&dbError2]) {
+                    NSLog(@"error in saving user info into db: %@", [dbError localizedDescription]);
+                    return;
+                }
+            }];
+            
+            Workspace *workspace = (Workspace *)[NSEntityDescription insertNewObjectForEntityForName:@"Workspace" inManagedObjectContext:self.managedObjectContext];
+            workspace.id = [workspaceInfo[@"id"] stringValue];
+            workspace.name = workspaceInfo[@"name"];
+
+            if (![self.managedObjectContext save:&dbError]) {
+                NSLog(@"error in saving user info into db: %@", [dbError localizedDescription]);
+                return;
+            }
+        }
+    }];
 }
 
 @end
