@@ -2,7 +2,7 @@
 //  MTAppDelegate.m
 //  Asanago
 //
-//  Created by 征大 高山 on 7/25/12.
+//  Created by Motohiro Takayama on 7/25/12.
 //  Copyright (c) 2012 mootoh.net. All rights reserved.
 //
 
@@ -33,6 +33,7 @@
         MTMasterViewController *controller = (MTMasterViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
+
     return YES;
 }
 							
